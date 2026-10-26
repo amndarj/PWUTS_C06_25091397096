@@ -82,7 +82,6 @@ PWUTS_C06_NIM/
     ├── roti_artisan.jpg
     ├── strobeyi_tart.jpg
     └── vanila_cupcake.jpg
-```
 
 ## 6. Cara Menjalankan Website
 Untuk menjalankan website Rifam Sweets, ikuti langkah-langkah berikut.
