@@ -1,0 +1,41 @@
+<section class="halaman-katalog">
+    <div class="kepala-halaman katalog-kepala">
+        <div class="judul-halaman">
+            <span class="label-atas">TEMUKAN FAVORITMU</span>
+            <h1>Katalog Produk</h1>
+            <p>Pilih roti, cake, atau pastry yang sesuai dengan seleramu.</p>
+        </div>
+        <div class="catatan-katalog">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>Informasi harga, ketersediaan, dan bahan alergen tersedia pada detail setiap produk.</span>
+        </div>
+    </div>
+    <div class="alat-katalog">
+        <label class="kolom-cari">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input 
+                type="search" 
+                id="cari-produk" 
+                placeholder="Cari nama produk..." 
+                aria-label="Cari produk"
+            >
+        </label>
+        <label class="pilih-kategori">
+            <span>Kategori</span>
+            <select id="filter-kategori">
+                <option value="Semua">Semua produk</option>
+                <option value="Roti">Roti</option>
+                <option value="Cake">Cake</option>
+                <option value="Pastry">Pastry</option>
+            </select>
+        </label>
+    </div>
+    <div class="hasil-katalog">
+        <span id="jumlah-hasil">6 produk tersedia</span>
+        <span>Dipanggang dengan sepenuh hati <i class="fa-solid fa-heart"></i></span>
+    </div>
+
+    <div id="detail-produk" class="detail-produk" style="display:none"></div>
+    <div class="grid-produk" id="daftar-katalog"></div>
+   
+</section>

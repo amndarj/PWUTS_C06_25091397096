@@ -1,0 +1,202 @@
+<section class="halaman-pemesanan">
+    <div class="kepala-halaman pemesanan-kepala">
+        <div class="judul-halaman">
+            <span class="label-atas">PESAN DENGAN MUDAH</span>
+            <h1>Halaman Pemesanan</h1>
+            <p>Lengkapi informasi di bawah ini untuk menyiapkan pesananmu.</p>
+        </div>
+
+        <aside class="ringkasan-pesan">
+            <div class="ikon-ringkasan">
+                <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+            <h3>Pesanan dibuat lebih mudah</h3>
+            <p>
+                Pilih produk yang diinginkan, tentukan jumlahnya,
+                dan lengkapi data pemesanan dengan benar.
+            </p>
+            <div class="langkah-pesan">
+                <span>01 <b>Pilih produk</b></span>
+                <span>02 <b>Isi formulir</b></span>
+                <span>03 <b>Konfirmasi pesanan</b></span>
+            </div>
+        </aside>
+    </div>
+
+    <div class="area-form-pesan">
+        <div class="info-form">
+            <span class="label-atas">FORMULIR PELANGGAN</span>
+            <h2>Detail pesananmu</h2>
+            <p>
+                Pastikan data yang dimasukkan sudah benar.
+                Kolom bertanda bintang wajib diisi.
+            </p>
+        </div>
+
+        <form id="form-pemesanan" class="form-pemesanan" novalidate>
+            <div class="dua-kolom-form">
+                <div class="grup-form">
+                    <label for="nama">Nama lengkap <b>*</b></label>
+                    <input
+                        class="isian-wajib"
+                        type="text"
+                        id="nama"
+                        placeholder="Masukkan nama lengkap"
+                    >
+                    <small class="pesan-error"></small>
+                </div>
+
+                <div class="grup-form">
+                    <label for="telepon">Nomor telepon <b>*</b></label>
+                    <input
+                        class="isian-wajib"
+                        type="tel"
+                        id="telepon"
+                        placeholder="Contoh: 081234567890"
+                    >
+                    <small class="pesan-error"></small>
+                </div>
+
+                <div class="grup-form grup-daftar-produk">
+                    <label>Produk yang dipesan <b>*</b></label>
+
+                    <div id="daftar-produk-pesan">
+                        <div class="baris-produk-pesan">
+                            <select
+                                class="isian-wajib produk-pilihan"
+                                required
+                                aria-label="Pilih produk"
+                            >
+                                <option value="">Pilih produk</option>
+                                <option>Butter Croissant</option>
+                                <option>Chocolate Cake</option>
+                                <option>Roti Artisan</option>
+                                <option>Strawberry Tart</option>
+                                <option>Cloud Bread</option>
+                                <option>Vanilla Cupcake</option>
+                            </select>
+
+                            <input
+                                class="isian-wajib jumlah-pilihan"
+                                type="number"
+                                min="1"
+                                max="100"
+                                step="1"
+                                value="1"
+                                required
+                                aria-label="Jumlah produk"
+                            >
+
+                            <button
+                                type="button"
+                                class="hapus-produk"
+                                aria-label="Hapus produk"
+                                title="Hapus produk"
+                            >
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+
+                            <small class="pesan-error error-produk"></small>
+                        </div>
+                    </div>
+
+                    <button
+                        type="button"
+                        id="tambah-produk"
+                        class="tombol tombol-tambah"
+                    >
+                        <i class="fa-solid fa-plus"></i>
+                        Tambah Produk
+                    </button>
+
+                    <small class="pesan-error error-daftar-produk"></small>
+                    <small class="petunjuk-produk">
+                        Pilih produk dan jumlahnya. Tekan Tambah Produk
+                        jika ingin memesan jenis lainnya.
+                    </small>
+                </div>
+
+                <div class="grup-form">
+                    <label for="tanggal">Tanggal pengambilan <b>*</b></label>
+                    <input
+                        class="isian-wajib"
+                        type="date"
+                        id="tanggal"
+                    >
+                    <small class="pesan-error"></small>
+                </div>
+
+                <div class="grup-form">
+                    <label for="catatan">Catatan tambahan</label>
+                    <input
+                        type="text"
+                        id="catatan"
+                        placeholder="Contoh: tulisan pada kue"
+                    >
+                </div>
+            </div>
+
+            <button class="tombol tombol-kirim" type="submit">
+                Kirim Pesanan
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+
+            <p
+                id="pesan-sukses"
+                class="pesan-sukses"
+                style="display:none"
+                role="status"
+            ></p>
+        </form>
+    </div>
+
+    <section class="pilihan-pesan">
+        <div class="judul-baris">
+            <div>
+                <span class="label-atas">PILIHAN UNTUKMU</span>
+                <h2>Berikut produk rekomendasi dari kami</h2>
+            </div>
+            <span class="subjudul">
+                Pilih sesuai selera dan kebutuhanmu.
+            </span>
+        </div>
+
+        <div class="grid-produk mini-produk">
+            <article class="kartu-produk">
+                <img src="image/butter_kwasong.jpg" alt="Butter Croissant">
+                <div class="isi-kartu">
+                    <span class="tag-kategori">Pastry</span>
+                    <h3>Butter Croissant</h3>
+                    <strong>Rp18.000</strong>
+                </div>
+            </article>
+
+            <article class="kartu-produk">
+                <img src="image/chocolate_cake.jpg" alt="Chocolate Cake">
+                <div class="isi-kartu">
+                    <span class="tag-kategori">Cake</span>
+                    <h3>Chocolate Cake</h3>
+                    <strong>Rp45.000</strong>
+                </div>
+            </article>
+
+            <article class="kartu-produk">
+                <img src="image/roti_artisan.jpg" alt="Roti Artisan">
+                <div class="isi-kartu">
+                    <span class="tag-kategori">Roti</span>
+                    <h3>Roti Artisan</h3>
+                    <strong>Rp22.000</strong>
+                </div>
+            </article>
+
+            <article class="kartu-produk">
+                <img src="image/strobeyi_tart.jpg" alt="Strawberry Tart">
+                <div class="isi-kartu">
+                    <span class="tag-kategori">Pastry</span>
+                    <h3>Strawberry Tart</h3>
+                    <strong>Rp32.000</strong>
+                </div>
+            </article>
+        </div>
+    </section>
+</section>
